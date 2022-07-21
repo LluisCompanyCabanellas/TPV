@@ -7,22 +7,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TPV</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/app.js"></script>
 </head>
 
-<body>
+<body onload="clickon()">
     <header>
         TPV
     </header>
     <main>
-        <div class="main-box">
+        <div class="layer">
+        </div>
+        <div class="modal-pay-flex">
+            <div class="modal-pay-container">
+                <div class="modal-pay-main-title-container">
+                    <div class="modal-pay-main-title">
+                        <span>Metodo de pago</span>
+                        <span class="close-modal">&#x2715</span>
+                    </div>
+                </div>
+                <div class="modal-pay-buttons-container">
+                    <div class="modal-pay-buttons">
+                        <button>efectivo</button>
+                        <button>tarjeta</button>
+                        <button>bizum</button>
+                    </div>
+                </div>
+                <div class="modal-pay-close-container">
+                    <div class="modal-pay-close">
+                        <button>CERRAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-delete-flex">
+            <div class="modal-delete-container">
+                <div class="modal-delete-main-title-container">
+                    <div class="modal-delete-main-title">
+                        <span>Eliminar Ticket</span>
+                        <span class="close-modal-delete">&#x2715</span>
+                    </div>
+                </div>
+                <div class="modal-delete-text">
+                    <p>Está a punto de borrar el pedido sin ser cobrado. 
+                        ¿Está completamente seguro de realizar esta acción?</p>
+                </div>
+                <div class="modal-delete-buttons-exit">
+                    <button>CERRAR</button>
+                    <button class="close">ELIMINAR</button>
+                </div>
+            </div>
+        </div>
+        <div class="main-container">
             <div class="column-ticket-table">
-                <div class="box-section">
-                    <div class="title-box">
+                <div class="container-section">
+                    <div class="title-container">
                         <span class="title">TICKET MESA 1</span>
                     </div>
                     <div class="section-content">
                         <div class="selected-products">
-                            <div class="products-box">
+                            <div class="products-container">
                                 <div class="product-element">
                                     <div class="product-element-info-product">
                                         <div class="product-element-close">
@@ -50,7 +93,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="products-box">
+                            <div class="products-container">
                                 <div class="product-element">
                                     <div class="product-element-info-product">
                                         <div class="product-element-close">
@@ -79,46 +122,46 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="date-products-group-box">
-                            <div class="date-product">
-                                <div class="date-product-title">
+                        <div class="data-products-group-container">
+                            <div class="data-product">
+                                <div class="data-product-title">
                                     <span>B.Imponible</span>
                                 </div>
-                                <div class="date-product-info">
+                                <div class="data-product-info">
                                     8.50€
                                 </div>
                             </div>
-                            <div class="date-product">
-                                <div class="date-product-title">
+                            <div class="data-product">
+                                <div class="data-product-title">
                                     <span>IVA()%</span>
                                 </div>
-                                <div class="date-product-info">
+                                <div class="data-product-info">
                                     1.79€
                                 </div>
                             </div>
-                            <div class="date-product">
-                                <div class="date-product-title">
+                            <div class="data-product">
+                                <div class="data-product-title">
                                     <span>TOTAL</span>
                                 </div>
-                                <div class="date-product-info">
+                                <div class="data-product-info">
                                     10.29€
                                 </div>
                             </div>
                         </div>
                         <div class="buttons-group">
-                            <div class="eliminate-box"><button>ELIMINAR</button></div>
-                            <div class="pay-box"><button>COBRAR</button></div>
+                            <div class="delete-container"><button>ELIMINAR</button></div>
+                            <div class="pay-container"><button>COBRAR</button></div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="column-group-tables">
-                <div class="box-section">
-                    <div class="title-box">
+                <div class="container-section">
+                    <div class="title-container">
                         <span class="title">CATEGORÍAS</span>
                     </div>
                     <div class="section-content-products">
-                        <div class="menu-buttons-box">
+                        <div class="menu-buttons-container">
                             <div class="menu-buttons-index">
                                 <div>
                                     <svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -142,7 +185,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="box-result-products">
+                        <div class="container-result-products">
                             <div class="result-product-drink">
                                 <div class="result-product-drink-image">
                                     <img src="img/refrescos.jpeg" alt="">
